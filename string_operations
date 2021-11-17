@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    char chpass[20];
+    char inpass[20];
+    int corr, len;
+    printf("ENTER YOUR PASSWORD\n");
+    scanf("%s",inpass);
+    printf("Re-ENTER YOUR PASSWORD\n");
+    scanf("%s",chpass);
+        corr=strcmp(inpass,chpass);   //Compaire Two String in C
+        len=strlen(inpass);           //Check Leangth of String in C
+    printf("you enter %d correctors in your password\n\n", len);
+    if(corr==0)
+    {
+        printf("Password Accepted  :)");
+    
+    }
+    else
+            printf("Password not Accepted  :(");
+    
+    return 0;
+}
