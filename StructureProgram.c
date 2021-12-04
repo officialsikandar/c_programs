@@ -37,19 +37,21 @@ int main()
     }
     
     
-    
+    printf("********************Employee Payroll**************************\n\n");    
+    printf("Employee Name\t Employee Id\t Per Day Salary\t Working Days\t Total Salary\t Total ESI\t Total PF\t Gross Salary\n");
     for(int i=0; i<n ;i++)
     {
-    printf("********************Employee : %d**************************\n\n",i+1);    
-    printf("Enter Employee Full Name :%s\n", em[i].fname);
-    printf("Enter Employee ID No. :%d\n", em[i].id);
-    printf("Enter Employee Per Day Salary :%d\n", em[i].pds);
-    printf("Enter Employee Working Days :%d\n",em[i].wd);
-    printf("Enter Employee Working Days :%d\n",em[i].total_salary);
-    printf("Enter Employee Working Days :%d\n",em[i].total_pf);
-    printf("Enter Employee Working Days :%d\n",em[i].total_esi);
-    printf("Enter Employee Working Days :%d\n",em[i].gross);
-    //printf("Enter Employee Full Name :\n");
+        printf("%s\t %d\t %d\t %d\t %d\t %d\t %d\t %d\n",em[i].fname, em[i].id, em[i].pds, em[i].wd, em[i].total_salary, em[i].total_esi, em[i].total_pf, em[i].gross);
+    
+    // printf("Enter Employee Full Name :%s\n", em[i].fname);
+    // printf("Enter Employee ID No. :%d\n", em[i].id);
+    // printf("Enter Employee Per Day Salary :%d\n", em[i].pds);
+    // printf("Enter Employee Working Days :%d\n",em[i].wd);
+    // printf("Enter Employee Working Days :%d\n",em[i].total_salary);
+    // printf("Enter Employee Working Days :%d\n",em[i].total_pf);
+    // printf("Enter Employee Working Days :%d\n",em[i].total_esi);
+    // printf("Enter Employee Working Days :%d\n",em[i].gross);
+    // printf("Enter Employee Full Name :\n");
     }
     
     
