@@ -2,7 +2,7 @@
 #include<conio.h>
 struct employee
 {
-    int id, pds, wd;
+    int id, pds, wd, gross, total_salary, total_esi, total_pf, pf, esi;
     char fname[10], lname[10];
     
 };
@@ -25,6 +25,15 @@ int main()
     scanf("%d",&em[i].pds);
     printf("Enter Employee Working Days\n");
     scanf("%d",&em[i].wd);
+    
+    //Calculat Payroll Details
+    
+    em[i].total_salary=em[i].pds*em[i].wd;                      //cal total with (per day salary * Total Working Days)
+    em[i].esi=(5*em[i].total_salary)/100;                       //cal 5% ESI of total salary
+    em[i].total_esi=em[i].esi+((5*em[i].total_salary)/100);     //cal 5% ESI of emp + 5% ESI from Company
+    em[i].pf=(10*em[i].total_salary)/100;                       //cal 10% PF of total Salary
+    em[i].total_pf=(em[i].pf+(10*em[i].total_salary)/100);      //cal 10% PF of EMP + 10 from Company
+    em[i].gross=(em[i].total_salary-em[i].total_esi)-em[i].total_pf;    //Cal Gross Salary (total_salary-esi-pf)
     }
     
     
@@ -36,7 +45,11 @@ int main()
     printf("Enter Employee ID No. :%d\n", em[i].id);
     printf("Enter Employee Per Day Salary :%d\n", em[i].pds);
     printf("Enter Employee Working Days :%d\n",em[i].wd);
-    printf("Enter Employee Full Name :\n");
+    printf("Enter Employee Working Days :%d\n",em[i].total_salary);
+    printf("Enter Employee Working Days :%d\n",em[i].total_pf);
+    printf("Enter Employee Working Days :%d\n",em[i].total_esi);
+    printf("Enter Employee Working Days :%d\n",em[i].gross);
+    //printf("Enter Employee Full Name :\n");
     }
     
     
