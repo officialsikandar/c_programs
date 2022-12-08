@@ -83,11 +83,6 @@ int search(){
     return 0;
 }
 
-//Display Searched Data
-int display(){
-    return 0;
-}
-
 //Add Inventory or Search Inventory
 int check(){
     printf("Select Option:\n\n1. Add Invantory\n2. Search Invantory\n\n");
