@@ -6,7 +6,7 @@ int n=0,ch,chh;
 struct carData{
     char billNo[5];
     char name[20];
-    char mobile[10];
+    char mobile[12];
     char serviceCharge[10];
 }c[];
 
@@ -21,6 +21,7 @@ int input(){
     scanf("%s",&c[n].mobile);
     printf("Enter Car Service Charges :\t");
     scanf("%s",&c[n].serviceCharge);
+    // printf("Mobile no.: %s",c[n].mobile);
     n++;
     check();
     return 0;
@@ -39,14 +40,14 @@ int usemob(){
             printf("Car User Mobile No. :\t%s\n",c[i].mobile);
             printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
         }
-        check();
     }
+    check();
     return 0;
 }
 
 //Search Data using Bill No.
 int usebill(){
-    char bil[10];
+    char bil[5];
     printf("Enter Bill Number :\t");
     scanf("%s",&bil);
     for(int i=0;i<=n;i++){
@@ -57,8 +58,8 @@ int usebill(){
             printf("Car User Mobile No. :\t%s\n",c[i].mobile);
             printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
         }
-        check();
     }
+    check();
     return 0;
 }
 
@@ -80,9 +81,21 @@ int search(){
     return 0;
 }
 
+//Display All Inventory
+display(){
+    for(int i=0;i<n;i++){
+        printf("\n");
+        printf("Bill Number :\t\t%s\n",c[i].billNo);
+        printf("Car Name :\t\t%s\n",c[i].name);
+        printf("Car User Mobile No. :\t%s\n",c[i].mobile);
+        printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
+    }
+    check();
+    return 0;
+}
 //Add Inventory or Search Inventory
 int check(){
-    printf("Select Option:\n\n1. Add Invantory\n2. Search Invantory\n\n");
+    printf("Select Option:\n\n1. Add Invantory\n2. Search Invantory\n3. Display All Invantory\n4. Exit\n\n");
     printf("Selected Option is:\t");
     scanf(" %d",&ch);
     switch(ch){
@@ -91,6 +104,12 @@ int check(){
         break;
         case 2:
         search();
+        break;
+        case 3:
+        display();
+        break;
+        case 4:
+        exit(0);
         break;
         default:
         printf("Entered value is not valid ");
