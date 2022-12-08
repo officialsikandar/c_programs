@@ -31,16 +31,15 @@ int usemob(){
     char mob[10];
     printf("Enter Mobile Number :\t");
     scanf("%s",&mob);
-    for(int i=0;i<n;i++){
+    for(int i=0;i<=n;i++){
         if(strcmp(c[i].mobile, mob)==0){
             printf("\n");
             printf("Bill Number :\t\t%s\n",c[i].billNo);
             printf("Car Name :\t\t%s\n",c[i].name);
             printf("Car User Mobile No. :\t%s\n",c[i].mobile);
             printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
-        }else{
-            printf("\nCar Data Not Found\n");
         }
+        check();
     }
     return 0;
 }
@@ -50,16 +49,15 @@ int usebill(){
     char bil[10];
     printf("Enter Bill Number :\t");
     scanf("%s",&bil);
-    for(int i=0;i<n;i++){
+    for(int i=0;i<=n;i++){
         if(strcmp(c[i].billNo, bil)==0){
             printf("\n");
             printf("Bill Number :\t\t%s\n",c[i].billNo);
             printf("Car Name :\t\t%s\n",c[i].name);
             printf("Car User Mobile No. :\t%s\n",c[i].mobile);
             printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
-        }else{
-            printf("\nCar Data Not Found\n");
         }
+        check();
     }
     return 0;
 }
