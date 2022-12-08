@@ -12,12 +12,11 @@ struct carData{
 
 //Input Data for Inventory
 int input(){
-    n=1;
     printf("\n\n");
     printf("Enter Bill Number :\t");
     scanf("%s",&c[n].billNo);
     printf("Enter Car Name :\t");
-    scanf("%[^]s",&c[n].name);
+    scanf("%s",&c[n].name);
     printf("Enter Car User Mobile No. :\t");
     scanf("%s",&c[n].mobile);
     printf("Enter Car Service Charges :\t");
@@ -37,8 +36,8 @@ int usemob(){
             printf("\n");
             printf("Bill Number :\t\t%s\n",c[i].billNo);
             printf("Car Name :\t\t%s\n",c[i].name);
-            printf("Car User Mobile No. :\t\t%s\n",c[i].mobile);
-            printf("Car Service Charges :\t\t%s\n",c[i].serviceCharge);
+            printf("Car User Mobile No. :\t%s\n",c[i].mobile);
+            printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
         }else{
             printf("\nCar Data Not Found\n");
         }
@@ -56,8 +55,8 @@ int usebill(){
             printf("\n");
             printf("Bill Number :\t\t%s\n",c[i].billNo);
             printf("Car Name :\t\t%s\n",c[i].name);
-            printf("Car User Mobile No. :\t\t%s\n",c[i].mobile);
-            printf("Car Service Charges :\t\t%s\n",c[i].serviceCharge);
+            printf("Car User Mobile No. :\t%s\n",c[i].mobile);
+            printf("Car Service Charges :\t%s\n",c[i].serviceCharge);
         }else{
             printf("\nCar Data Not Found\n");
         }
